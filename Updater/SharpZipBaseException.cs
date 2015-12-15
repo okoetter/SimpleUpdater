@@ -20,7 +20,7 @@
 // making a combined work based on this library.  Thus, the terms and
 // conditions of the GNU General Public License cover the whole
 // combination.
-// 
+//
 // As a special exception, the copyright holders of this library give you
 // permission to link this library with independent modules to produce an
 // executable, regardless of the license terms of these independent
@@ -54,7 +54,7 @@ namespace ICSharpCode.SharpZipLib
 	{
 #if !NETCF_1_0 && !NETCF_2_0
 		/// <summary>
-		/// Deserialization constructor 
+		/// Deserialization constructor
 		/// </summary>
 		/// <param name="info"><see cref="System.Runtime.Serialization.SerializationInfo"/> for this constructor</param>
 		/// <param name="context"><see cref="StreamingContext"/> for this constructor</param>
@@ -63,14 +63,14 @@ namespace ICSharpCode.SharpZipLib
 		{
 		}
 #endif
-		
+
 		/// <summary>
 		/// Initializes a new instance of the SharpZipBaseException class.
 		/// </summary>
 		public SharpZipBaseException()
 		{
 		}
-		
+
 		/// <summary>
 		/// Initializes a new instance of the SharpZipBaseException class with a specified error message.
 		/// </summary>

@@ -23,7 +23,7 @@
 // making a combined work based on this library.  Thus, the terms and
 // conditions of the GNU General Public License cover the whole
 // combination.
-// 
+//
 // As a special exception, the copyright holders of this library give you
 // permission to link this library with independent modules to produce an
 // executable, regardless of the license terms of these independent
@@ -38,7 +38,7 @@
 
 using System;
 
-namespace ICSharpCode.SharpZipLib.Checksums 
+namespace ICSharpCode.SharpZipLib.Checksums
 {
 	/// <summary>
 	/// Bzip2 checksum algorithm
@@ -111,13 +111,13 @@ namespace ICSharpCode.SharpZipLib.Checksums
 			0xafb010b1, 0xab710d06, 0xa6322bdf, 0xa2f33668,
 			0xbcb4666d, 0xb8757bda, 0xb5365d03, 0xb1f740b4
 		};
-		
+
 		int globalCrc;
 
 		/// <summary>
 		/// Initialise a default instance of <see cref="StrangeCRC"></see>
-		/// </summary>	
-		public StrangeCRC() 
+		/// </summary>
+		public StrangeCRC()
 		{
 			Reset();
 		}
@@ -138,7 +138,7 @@ namespace ICSharpCode.SharpZipLib.Checksums
 				return ~globalCrc;
 			}
 		}
-		
+
 		/// <summary>
 		/// Update the Crc value.
 		/// </summary>
@@ -161,10 +161,10 @@ namespace ICSharpCode.SharpZipLib.Checksums
 			if (buffer == null) {
 				throw new ArgumentNullException("buffer");
 			}
-			
+
 			Update(buffer, 0, buffer.Length);
 		}
-		
+
 		/// <summary>
 		/// Update Crc based on a portion of a block of data
 		/// </summary>
@@ -176,14 +176,14 @@ namespace ICSharpCode.SharpZipLib.Checksums
 			if (buffer == null) {
 				throw new ArgumentNullException("buffer");
 			}
-			
+
 			if ( offset < 0 )
 			{
 #if NETCF_1_0
 				throw new ArgumentOutOfRangeException("offset");
 #else
 				throw new ArgumentOutOfRangeException("offset", "cannot be less than zero");
-#endif				
+#endif
 			}
 
 			if ( count < 0 )
@@ -199,7 +199,7 @@ namespace ICSharpCode.SharpZipLib.Checksums
 			{
 				throw new ArgumentOutOfRangeException("count");
 			}
-			
+
 			for (int i = 0; i < count; ++i) {
 				Update(buffer[offset++]);
 			}
