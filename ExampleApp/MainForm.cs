@@ -37,9 +37,9 @@ namespace ExampleApp
 
             using (UpdateForm f = new UpdateForm())
             {
-                f.Text = string.Format(f.Text, Application.ProductName, appVersion);
-                f.MoreInfoLink = (string)doc.Root.Element("info");
-                f.Info = string.Format(f.Info, newVersion, (DateTime)doc.Root.Element("date"));
+                f.Text = String.Format(f.Text, Application.ProductName, appVersion);
+                f.Info = String.Format(f.Info, newVersion);
+                f.Changelog = (string)doc.Root.Element("changelog");
                 if (f.ShowDialog(this) == DialogResult.OK)
                 {
                     Updater.LaunchUpdater(doc);

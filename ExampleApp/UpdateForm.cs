@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace ExampleApp
 {
@@ -9,13 +12,36 @@ namespace ExampleApp
             InitializeComponent();
         }
 
-        public string Info { get { return lblInfo.Text; } set { lblInfo.Text = value; } }
-        public string MoreInfoLink { get; set; }
-
-        private void linkInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public string Info
         {
-            linkInfo.LinkVisited = true;
-            System.Diagnostics.Process.Start(MoreInfoLink);
+            get
+            {
+                return labelInfo.Text;
+            }
+            set
+            {
+                labelInfo.Text = value;
+            }
+        }
+
+        public string Changelog {
+            get
+            {
+                return textBoxChangelog.Text;
+            }
+
+            set
+            {
+                string result = "";
+                foreach (string line in value.Split(new string[] { "\r\n", "\r", "\n"}, StringSplitOptions.None))
+                {
+                    result += line.Trim() + Environment.NewLine;
+                }
+                result = Regex.Replace(result, $"^\\s*{Environment.NewLine}", ""); //remove first empty line
+                result = Regex.Replace(result, $"{Environment.NewLine}\\s*$", ""); //remove last empty lines
+
+                textBoxChangelog.Text = result;
+            }
         }
     }
 }
