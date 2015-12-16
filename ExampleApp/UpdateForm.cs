@@ -35,7 +35,7 @@ namespace ExampleApp
                 string result = "";
                 foreach (string line in value.Split(new string[] { "\r\n", "\r", "\n"}, StringSplitOptions.None))
                 {
-                    result += line.Trim() + Environment.NewLine;
+                    result += line + Environment.NewLine;
                 }
                 result = Regex.Replace(result, $"^\\s*{Environment.NewLine}", ""); //remove first empty line
                 result = Regex.Replace(result, $"{Environment.NewLine}\\s*$", ""); //remove last empty lines
