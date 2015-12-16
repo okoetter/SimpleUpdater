@@ -71,7 +71,7 @@ namespace JarrettVance.Updater
                 XDocument doc = XDocument.Load(Manifest);
                 string title = Path.GetFileNameWithoutExtension(Manifest);
                 lblTitle.Text = string.Format(lblTitle.Text, title);
-                lblInfo.Text = string.Format(lblInfo.Text, title, (string)doc.Root.Element("version"), (DateTime)doc.Root.Element("date"));
+                lblInfo.Text = string.Format(lblInfo.Text, title, (string)doc.Root.Element("version"));
 
                 // download update zip
                 lblStatus.Text = "Downloading update...";

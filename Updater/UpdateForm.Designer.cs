@@ -53,7 +53,7 @@
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(428, 18);
             this.lblInfo.TabIndex = 3;
-            this.lblInfo.Text = "to version {1} from {2}";
+            this.lblInfo.Text = "to version {1}";
             // 
             // lblTitle
             // 
