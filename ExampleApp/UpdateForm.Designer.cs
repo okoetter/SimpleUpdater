@@ -52,7 +52,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelInfo.Location = new System.Drawing.Point(29, 52);
             this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(341, 23);
+            this.labelInfo.Size = new System.Drawing.Size(568, 23);
             this.labelInfo.TabIndex = 1;
             this.labelInfo.Text = "New version {0} is available:";
             // 
@@ -62,7 +62,7 @@
             this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUpdate.Location = new System.Drawing.Point(304, 314);
+            this.btnUpdate.Location = new System.Drawing.Point(531, 314);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(66, 40);
             this.btnUpdate.TabIndex = 3;
@@ -76,7 +76,7 @@
             this.btnSkip.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSkip.Image = ((System.Drawing.Image)(resources.GetObject("btnSkip.Image")));
             this.btnSkip.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSkip.Location = new System.Drawing.Point(220, 315);
+            this.btnSkip.Location = new System.Drawing.Point(447, 315);
             this.btnSkip.Name = "btnSkip";
             this.btnSkip.Size = new System.Drawing.Size(66, 40);
             this.btnSkip.TabIndex = 4;
@@ -91,7 +91,7 @@
             this.textBoxChangelog.Name = "textBoxChangelog";
             this.textBoxChangelog.ReadOnly = true;
             this.textBoxChangelog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxChangelog.Size = new System.Drawing.Size(338, 230);
+            this.textBoxChangelog.Size = new System.Drawing.Size(565, 230);
             this.textBoxChangelog.TabIndex = 5;
             // 
             // UpdateForm
@@ -100,7 +100,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnSkip;
-            this.ClientSize = new System.Drawing.Size(389, 366);
+            this.ClientSize = new System.Drawing.Size(616, 366);
             this.ControlBox = false;
             this.Controls.Add(this.textBoxChangelog);
             this.Controls.Add(this.btnSkip);
