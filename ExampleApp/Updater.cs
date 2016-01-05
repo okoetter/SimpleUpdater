@@ -10,6 +10,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using ExampleApp.Properties;
+using System.Linq;
 
 namespace ExampleApp
 {
@@ -36,6 +37,17 @@ namespace ExampleApp
 
                 // download manifest
                 XDocument doc = XDocument.Load(Settings.Default.RemoteManifest);
+
+                // b2k -- look for multiple versions in the file.
+                var versions = doc.Descendants("version");
+                if (versions.Count() > 1)
+                {
+                    var nextVersion = versions.SkipWhile(node => new Version(node.Value) <= appVersion).FirstOrDefault();
+                    if (nextVersion != null && nextVersion.Parent != null)
+                    {
+                        doc = new XDocument(nextVersion.Parent.ToString());
+                    }
+                }
 
                 // if newer, display update dialog
                 Version newestVersion = new Version((string)doc.Root.Element("version"));
