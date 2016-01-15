@@ -40,12 +40,12 @@ namespace ExampleApp
 
                 // b2k -- look for multiple versions in the file.
                 var versions = doc.Descendants("version");
-                if (versions.Count() > 1)
+                if (versions.Count() > 0)
                 {
                     var nextVersion = versions.SkipWhile(node => new Version(node.Value) <= appVersion).FirstOrDefault();
                     if (nextVersion != null && nextVersion.Parent != null)
                     {
-                        doc = new XDocument(nextVersion.Parent.ToString());
+                        doc = new XDocument(nextVersion.Parent);
                     }
                 }
 
