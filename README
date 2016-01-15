@@ -1,9 +1,41 @@
-Please see http://jvance.com/pages/SimpleUpdater.xhtml
+This is a form of SimpleUpdater from jarrettv. Please see http://jvance.com/pages/SimpleUpdater.xhtml
 
-Debug Instructions
-* Open Updater project properties
-* Go to Debug tab
-* Enter the command line options for manifest location & app location
-Example: C:\Programs\ExampleApp\ExampleApp.manifest C:\Programs\ExampleApp\ExampleApp.exe
-* Set working directory
-Example: C:\Programs\ExampleApp\
+Changes in this fork:
+
+- Application.manifest to not show UAC prompt when running Updater.exe
+- removed date and info from manifest
+- added changelog to manifest, shown in update dialog
+- added processing multiple pending updates from b2k (https://github.com/jarrettv/SimpleUpdater/issues/4)
+
+The new manifest structure looks like this:
+
+<manifests>
+  <manifest>
+    <version>0.0.3.0</version>
+    <download>https://my.example.com/updates/project/project-Update-0.0.3.0.zip</download>
+    <changelog>
+      This is a great release!
+
+      Changes:
+
+      - new feature a
+      - new feature b
+      - fixed bug a
+      - fixed bug b
+
+      This is really a great release!
+    </changelog>
+  </manifest>
+  <manifest>
+    <version>0.0.3.1</version>
+    <download>https://my.example.com/updates/project/project-Update-0.0.3.1.zip</download>
+    <changelog>
+      This is a small bugfix release!
+
+      Changes:
+
+      - fixed bug a
+      - fixed bug b
+    </changelog>
+  </manifest>
+</manifests>
