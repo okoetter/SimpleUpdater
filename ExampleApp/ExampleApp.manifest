@@ -1,9 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!-- Update this file when you have a new version. 
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Update this file when you have a new version.
      Upload both this file and the below zip file. -->
-<manifest>
-  <date>2012-01-03T23:21:52</date>
-  <version>1.0</version>
-  <info>http://jvance.com/pages/SimpleUpdater.xhtml</info>
-  <download>http://jvance.com/files/ExampleApp.1.0.zip</download>
-</manifest>
+<manifests>
+  <manifest>
+    <version>0.0.3.0</version>
+    <download>https://my.example.com/updates/project/project-Update-0.0.3.0.zip</download>
+    <changelog>
+      This is a great release!
+
+      Changes:
+
+      - new feature a
+      - new feature b
+      - fixed bug a
+      - fixed bug b
+
+      This is really a great release!
+    </changelog>
+  </manifest>
+  <manifest>
+    <version>0.0.3.1</version>
+    <download>https://my.example.com/updates/project/project-Update-0.0.3.1.zip</download>
+    <changelog>
+      This is a small bugfix release!
+
+      Changes:
+
+      - fixed bug a
+      - fixed bug b
+    </changelog>
+  </manifest>
+</manifests>
